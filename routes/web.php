@@ -1,8 +1,6 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::view('/', 'welcome')->name('home');
 
 Route::prefix('register')->as('register.')->group(function(){
 	Route::view('/', 'auth.register')->name('create');
